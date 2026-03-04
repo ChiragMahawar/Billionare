@@ -1,0 +1,144 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, var(--background) 70%);
+    padding: 2rem;
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 450px;
+    padding: 3rem;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.logoIcon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 12px;
+    margin: 0 auto 1.5rem;
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: var(--text-secondary);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.inputGroup input {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.inputGroup input:focus {
+    border-color: var(--primary);
+}
+
+.forgot {
+    text-align: right;
+}
+
+.forgot a {
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
+.submitBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.divider {
+    margin: 2rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--surface-border);
+    z-index: 1;
+}
+
+.divider span {
+    position: relative;
+    z-index: 2;
+    background: #0d1117;
+    /* Darker to match card bg */
+    padding: 0 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.socialGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.socialBtn {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footerText {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footerText a {
+    color: var(--primary);
+    font-weight: 600;
+}

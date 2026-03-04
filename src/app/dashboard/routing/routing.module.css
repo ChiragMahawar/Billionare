@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: var(--text-muted);
+}
+
+.policyGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.policyCard {
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.2s;
+}
+
+.policyCard.active {
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.policyCheck {
+    font-size: 1.5rem;
+}
+
+.policyInfo {
+    flex-grow: 1;
+}
+
+.policyInfo h3 {
+    margin-bottom: 0.5rem;
+}
+
+.policyInfo p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.selectBtn {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gateWaySection {
+    padding: 3rem;
+    border-radius: 24px;
+}
+
+.gateWaySection h3 {
+    margin-bottom: 1rem;
+}
+
+.gateWaySection p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.codeBlock {
+    background: var(--background);
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--surface-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.codeBlock code {
+    color: var(--primary);
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.codeBlock button {
+    background: var(--primary);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.statusBadge {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #10b981;
+}
