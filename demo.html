@@ -448,10 +448,10 @@
                 <div class="logo" style="margin-bottom: 3rem;">
                     <div class="logo-box"></div> TokenFlow
                 </div>
-                <div class="sidebar-item sidebar-item-active" onclick="switchTab('overview')">🏠 Overview</div>
-                <div class="sidebar-item" onclick="switchTab('analytics')">📊 Analytics</div>
-                <div class="sidebar-item" onclick="switchTab('routing')">🏎️ Smart Routing</div>
-                <div class="sidebar-item" onclick="switchTab('optimize')">✨ Optimization</div>
+                <div class="sidebar-item sidebar-item-active" onclick="switchTab('overview', event)">🏠 Overview</div>
+                <div class="sidebar-item" onclick="switchTab('analytics', event)">📊 Analytics</div>
+                <div class="sidebar-item" onclick="switchTab('routing', event)">🏎️ Smart Routing</div>
+                <div class="sidebar-item" onclick="switchTab('optimize', event)">✨ Optimization</div>
                 <div class="sidebar-item" onclick="showScreen('screen-landing')" style="margin-top: auto;">🚪 Logout
                 </div>
             </aside>
@@ -608,7 +608,22 @@
             window.scrollTo(0, 0);
         }
 
-        function switchTab(tabId) {
+        function switchTab(tabId, e) {
+            document.getElementById('tab-overview').style.display = 'none';
+            document.getElementById('tab-analytics').style.display = 'none';
+            document.getElementById('tab-optimize').style.display = 'none';
+            document.getElementById('tab-routing').style.display = 'none';
+            document.getElementById('tab-' + tabId).style.display = 'block';
+
+            document.getElementById('tab-title').innerText =
+                tabId.charAt(0).toUpperCase() + tabId.slice(1);
+
+            // Remove active class from all items
+            document.querySelectorAll('.sidebar-item')
+                .forEach(i => i.classList.remove('sidebar-item-active'));
+
+            // Use passed event object
+            e.target.classList.add('sidebar-item-active');
             document.getElementById('tab-overview').style.display = 'none';
             document.getElementById('tab-analytics').style.display = 'none';
             document.getElementById('tab-optimize').style.display = 'none';
